@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="formLogin">
+  <div class="form-group">
+    <label class="form-label" for="name">Nombre:</label>
+    <input class="form-control" formControlName="nombre" [value]="formLogin.value.nombre" id="name" type="text" placeholder="Nombre">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="correo">Correo:</label>
+    <input class="form-control" formControlName="correo" [value]="formLogin.value.correo" id="correo" type="email" placeholder="Correo">
+  </div>
+
+  <div class="d-flex align-items-center">
+    <a class="mt-2" href="">Recuperar contraseña</a>
+  </div>
+
+  <button (click)="login(formLogin.value)" [disabled]="!formLogin.valid" class="btn btn-primary mt-2">Login</button>
+</form>
+
+<a class="mt-2" href="">Registrarse</a>
