@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'app-recover-password',
+  templateUrl: './recover-password.component.html',
+  styleUrls: ['./recover-password.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RecoverPasswordComponent implements OnInit {
 
   constructor(
     private route: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 import { Empleado } from 'src/interfaces/empleado-login';
 import Swal from 'sweetalert2';
 
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
 
 
   constructor(
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private route: Router
   ) {
 
     this.formLogin = formBuilder.group({
@@ -33,6 +35,17 @@ export class LoginComponent implements OnInit {
     if(this.formLogin.valid){
       console.log(body);
       this.resetCampos();
+      Swal.fire({
+        title: 'Correcto',
+        icon: 'success',
+        text: 'Ingreso de sesión correcto',
+        confirmButtonText: 'Aceptar'
+      }).then(
+        ()=> {
+          this.route.navigateByUrl("home");
+        }
+      );
+
     }else{
       Swal.fire({
         title: 'Faltan campos',
