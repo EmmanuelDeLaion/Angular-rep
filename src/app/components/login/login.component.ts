@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Empleado } from 'src/interfaces/Empleado-Login';
+import { Empleado } from 'src/interfaces/empleado-login';
 import Swal from 'sweetalert2';
 
 
