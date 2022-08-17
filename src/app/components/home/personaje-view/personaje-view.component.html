@@ -1,7 +1,29 @@
 <div class="container">
   <div class="d-flex align-items-center">
-    <button class="mt-2 btn btn-primary" (click)="home()">Regresar</button>
-    <h1 class="ms-3">Goku</h1>
+    <button class="mt-2 btn btn-outline-primary" (click)="home()">Regresar</button>
+    <h1 class="ms-3">{{personajeDB.name}}</h1>
   </div>
   <hr>
+
+  <div class="row">
+    <div class="col-6">
+      <h3 [ngClass]="personajeDB.status === 'Vivo' ? 'bg-success' : 'bg-danger' " class="badge">{{personajeDB.status}}</h3>
+      <h2>Nombre:</h2>
+      <h3 class="display-4">{{personajeDB.name}}</h3>
+      <h2>Specie:</h2>
+      <h3 class="display-4">{{personajeDB.specie}}</h3>
+      <h2>Role:</h2>
+      <h3 class="display-4">{{personajeDB.role}}</h3>
+      <h2>Universo:</h2>
+      <h3 class="display-4">{{personajeDB.universe}}</h3>
+      <h2>Origin Planet:</h2>
+      <h3 class="display-4">{{personajeDB.originplanet}}</h3>
+    </div>
+
+    <div class="col-6">
+      <img class="img-personaje" src="{{personajeDB.imageUrl}}" alt="">
+    </div>
+  </div>
+
+
 </div>
