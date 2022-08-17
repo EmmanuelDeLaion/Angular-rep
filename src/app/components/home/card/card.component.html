@@ -1,8 +1,15 @@
-<div class="card">
-  <div class="card-header">
-    <p>Titulo</p>
-  </div>
+<div class="card" style="width: 18rem;">
+  <img [src]="img" class="card-img-top img-profile" alt="...">
+
   <div class="card-body">
-    <p>Cuerpo</p>
+    <div class="col">
+      <p [ngClass]="personaje.status === 'Vivo' ? 'bg-success' : 'bg-danger'" class="badge">Vivo</p>
+      <h3>{{personaje.name}}</h3>
+      <p><b>Especie</b> {{personaje.specie}}</p>
+      <p><b>Role: </b>{{personaje.role}}</p>
+      <p><b>Universo: </b>{{personaje.universe}}</p>
+    </div>
+
+    <button (click)="verPersonaje(personaje.name)" class="btn btn-primary d-block w-100">Ver</button>
   </div>
 </div>

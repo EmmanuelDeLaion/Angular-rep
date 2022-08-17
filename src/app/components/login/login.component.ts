@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { Empleado } from 'src/interfaces/empleado-login';
+import { Empleado } from 'src/interfaces/usuario-login';
 import Swal from 'sweetalert2';
 
 
